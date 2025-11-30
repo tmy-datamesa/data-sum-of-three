@@ -1,50 +1,54 @@
-Let's start with a very simple example to understand how these exercises are going to work.
+Bu alıştırmaların nasıl işleyeceğini anlamak için çok basit bir örnekle başlayalım.
 
-## How to solve a challenge
+## Bir challenge nasıl çözülür?
 
-Some of the exercises will have a `Makefile`. This file will let you check whether or not your challenge is correct (using [Test-Driven Development (TDD)](https://en.wikipedia.org/wiki/Test-driven_development) where tests have been written beforehand by Le Wagon's teachers). To run this script in your terminal, `cd` to the proper folder (as explained above ☝️) and run:
+Bazı alıştırmalarda bir `Makefile` bulunur.
+Bu dosya, challenge’ının doğru olup olmadığını kontrol etmeni sağlar (Le Wagon hocaları tarafından önceden yazılmış testleri kullanan Test-Driven Development (TDD) yaklaşımıyla).
+Bu script’i terminalde çalıştırmak için, doğru klasöre cd ile geç (yukarıda açıklandığı gibi ☝️) ve şu komutu çalıştır:
 
 ```bash
 make
 ```
 
-Your goal is to implement the function `sum3` in the `sum_of_three.py` file. The workflow you need to follow is:
+Amacın, `sum_of_three.py` dosyasında `sum3` function’ını implement etmektir. İzlemen gereken adımlar şunlardır:
 
-1. Read all of the challenge instructions
-1. Open the `sum_of_three.py` file where you need to write code and read it first
-1. Run `make`
-1. Read the first error message and try to make sense of it (if you need to, Google it!)
-1. Change the code in `sum_of_three.py`
-1. Re-run `make`
-1. New error message? Fewer failures? You are making progress!
-1. Repeat until you no longer have any errors
-1. Make sure your style is correct and you achieve a `10.00/10` score
-1. Commit & push your changes to Kitt:
-  1. `git status` to check which files have been changed since the last commit
-  1. `git diff` to check what has been changed
+1. Challenge talimatlarının tamamını oku
+1. Kod yazacağın sum_of_three.py dosyasını aç ve önce onu oku
+1. Run `make` (çalıştır)
+1. İlk hata mesajını oku ve anlamaya çalış (gerekirse Google’a sor!)
+1.sum_of_three.py dosyasındaki kodu değiştir
+1.`make`komutunu tekrar çalıştır 
+1. Yeni hata mesajı mı çıktı? Hata sayısı azaldı mı? İlerleme kaydediyorsun!
+1. Hata kalmayana kadar tekrarla
+1. Kod stilinin doğru olduğundan ve 10.00/10 stil skoruna ulaştığından emin ol
+1. Değişikliklerini Workintech’e commit ve push et:
+  1. `git status` Son commmit’ten beri hangi dosyaların değiştiğini görmek için
+  1. `git diff` Ne değiştiğini görmek için
   1. `git add sum_of_three.py`
   1. `git commit -m "Solve first Python exercise of the day"`
   1. `git push origin master`
 
-## How does `make` work?
+## `make` nasıl çalışır?
 
-`make` can run commands you define in the `Makefile`.
+`make` , `Makefile` içinde tanımladığın komutları çalıştırabilir..
 
-Open the `Makefile` in your text editor and have a look at it.
+`Makefile` dosyasını text editoründe aç ve incele.
 
-There are two important pieces of the Python ecosystem that we use to help you:
+Sana yardımcı olmak için Python ekosisteminden iki önemli aracı kullanıyoruz:
 
-- [pytest](https://docs.pytest.org/en/latest/)
-- [pylint](https://www.pylint.org/) to enforce the [PEP 8 - Style Guide for Python](https://www.python.org/dev/peps/pep-0008/)
+-pytest
+-pylint
 
-By default, `make` will run both `pylint` and `pytest` to check for both code style and correctness.
-Know that you can run any of the tasks individually to focus on either Style or Tests with the following commands:
+
+Varsayılan olarak `make`, hem `pylint` hem de `pytest` çalıştırarak hem kod stilini hem de doğruluğunu kontrol eder.
+Sadece stile veya sadece testlere odaklanmak istersen, şu komutlarla ayrı ayrı çalıştırabilirsin:
+
 
 ```bash
 make pylint
 make pytest
 ```
 
-## Conclusion
+## Sonuç
 
-The goal of this exercise is to show you how to run the tests to automatically evaluate your code (both style & correctness) and introduce you to this tight feedback loop.
+Bu alıştırmanın amacı, testleri çalıştırarak kodunun (hem stil hem doğruluk açısından) otomatik olarak nasıl değerlendirileceğini göstermek ve seni bu hızlı geri bildirim döngüsüyle tanıştırmaktır.
